@@ -1,2 +1,7 @@
-# alura-cursos
-Material Curso Alura
+# Alura Cursos
+
+> Material Curso Alura
+
+```
+node app.js
+```
