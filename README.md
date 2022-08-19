@@ -2,7 +2,8 @@
 
 > Material Curso Alura
 
-Para rodar o projeto
+Para rodar o projeto usar o comando
+
 ```
 node app.js
 ```
