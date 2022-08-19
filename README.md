@@ -2,7 +2,7 @@
 
 > Material Curso Alura
 
-Para Rodar o projeto
+Para rodar o projeto
 ```
 node app.js
 ```
