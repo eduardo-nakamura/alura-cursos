@@ -83,7 +83,7 @@ h2 {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    width: 100%;
+    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -144,7 +144,9 @@ h2 {
         font-size: 0.9em;
     }
     .list-container li {
-        width: 45%;
+        width: 42%;
+        padding: 2%;
+        margin: 2%;
     }
 }
 
@@ -154,5 +156,6 @@ h2 {
     }
     .list-container li {
         width: 95%;
+        margin: 1em 0;
     }
 }
