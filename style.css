@@ -7,6 +7,12 @@ header{
     font-weight: bold;
     font-size: 2em;
     text-align: center;
+    margin: 0;
+}
+.section-1{
+    background: linear-gradient(#ccc, #fff);
+    padding: 0;
+    margin: 0;
 }
 .list-container{
     padding: 1em ;
@@ -15,7 +21,7 @@ header{
     flex-wrap: wrap;
     width: 100%;
     max-width: 1200px;
-    margin: 10px auto;
+    margin: 0 auto;
 }
 .list-container li{
     width: 29%;
@@ -36,13 +42,26 @@ header{
 .list-container h3,
 .list-container p,
 .list-container span{ 
-    margin: 2.5% 0;
+    margin: 3% 0;
 }
 .list-container a{
     text-decoration: none;
+    
 }
 .list-container img{
     width: 100%;
+}
+.list-container .calltoaction{ 
+    padding: 1em 2em;
+    margin: 1em 0;
+    border: 1px solid rgba(0, 0, 0, 0.9);
+    text-align: center;
+    width: 100px;
+    transition: all 0.3s;
+}
+.list-container li:hover .calltoaction{ 
+    background-color: black;
+    color: #FFF;
 }
 @media screen and (max-width: 870px) { 
 	.list-container li{
