@@ -1,0 +1,56 @@
+body {
+	font-family: 'Montserrat', sans-serif;
+}
+header{
+    background-color: #ccc;
+    padding: 2em 0;
+    font-weight: bold;
+    font-size: 2em;
+    text-align: center;
+}
+.list-container{
+    padding: 1em ;
+    display: flex;
+    flex-direction: row;    
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1200px;
+    margin: 10px auto;
+}
+.list-container li{
+    width: 29%;
+    padding: 1%;
+    margin: 1%;
+    background-color: #FFF;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+.list-container li:hover{
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 15px 15px 15px rgba(0, 0, 0, 0.3);
+}
+.list-container h3{
+    font-size: 1.6em;
+    font-weight: bold;
+}
+.list-container h3,
+.list-container p,
+.list-container span{ 
+    margin: 2.5% 0;
+}
+.list-container a{
+    text-decoration: none;
+}
+.list-container img{
+    width: 100%;
+}
+@media screen and (max-width: 870px) { 
+	.list-container li{
+        width: 45%;   
+    }
+}
+@media screen and (max-width: 480px) { 
+	.list-container li{
+        width: 95%;   
+    }
+}
