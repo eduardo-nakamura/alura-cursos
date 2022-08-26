@@ -25,7 +25,7 @@ const gradesB = [10, 7, 8, 5, 10]
 if(gradesB.length === 5) {gradesB.pop()}
 media(gradesB)
 
-// concat()
+
 const gradeConcat = grades.concat(grades2) // [10, 6.5,  8, 7.5, 10,  10, 10,  10]
 const gradeFilter = gradeConcat.filter(grd => grd > 7) // [10,  8, 7.5, 10, 10, 10,  10]
 const gradeFind = gradeConcat.find(grd => grd === 7.5) // 7.5
@@ -39,14 +39,3 @@ const gradePush = gradeConcat.push(4) // add number 4 in last position
 const gradeUnshift = gradeConcat.unshift(4) // add number 4 in first position
 const gradeReverse = gradeConcat.reverse() // reverse order
 const gradeSlice = gradeConcat.slice(2) // remove second element 6.5
-
-
-// reduce array to sum all elements 4 + 6.5 + 8 + 7.5 + 10 + 10 + 10 + 4
-const sumWithInitial = gradeConcat.reduce(
-    (previousValue, currentValue) => previousValue + currentValue,
-    0
-);
-
-console.log(gradeConcat.sort((a, b) => a + b )) // sort ascend
-console.log(gradeConcat.sort((a, b) => a - b )) // sort descendung
-
