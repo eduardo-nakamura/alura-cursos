@@ -51,12 +51,15 @@ nav a:hover {
 	margin: 0 1.5%;
 	padding: 30px 20px;
 	box-sizing: border-box;
-	border: 2px solid #000000;
+	border: 2px solid #C78C19;
 	border-radius: 10px;
+	color: #C78C19;
+	transition: all 0.3s;
+	filter: saturate(0);
 }
 
 .produtos li:hover {
-	border-color: #C78C19;
+	filter: saturate(1);
 }
 
 .produtos li:active {
@@ -64,11 +67,13 @@ nav a:hover {
 }
 
 .produtos li:hover h2 {
-	font-size: 34px;
+	font-size: 30px;
 }
 
 .produtos h2 {
-	font-size: 30px;
+	transition: all 0.3s;
+	font-size: 26px;
+	line-height: 30px;
 	font-weight: bold;
 }
 
@@ -95,7 +100,9 @@ footer {
 }
 
 main {
-	
+	width: 100%;
+	max-width: 960px;
+	margin: 0 auto;
 }
 
 form {
