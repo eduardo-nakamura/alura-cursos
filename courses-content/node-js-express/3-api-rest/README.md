@@ -4,4 +4,4 @@ Apps: mongoDB, Postman
 
 packages: mongoose, express
 
-Topics: Routes, mongoDB + mongoose, creating local servers, routes, models, controllers.
+Topics: APIs, Routes, mongoDB + mongoose, creating local servers, routes, models, controllers.
