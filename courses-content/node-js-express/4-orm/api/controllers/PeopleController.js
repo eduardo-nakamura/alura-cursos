@@ -3,21 +3,21 @@ const database = require('../models')
 class PeopleController {
     static async getAllPeople(req, res){
         try {
-            const allPeople = await database.Person.findAll()
+            const allPeople = await database.People.findAll()
             return res.status(200).json(allPeople)
         } catch (error) {
             return res.status(400).json(error.message)            
         }
     }
 
-    static async filterPersonById(req, res){
+    static async filterPeopleById(req, res){
         const { id } = req.params
         try {
-            const selectedPerson = await database.Person.findOne({ where: { id: Number(id) }})
-            if (selectedPerson) {
-                return res.status(200).json(selectedPerson)
+            const selectedPeople = await database.People.findOne({ where: { id: Number(id) }})
+            if (selectedPeople) {
+                return res.status(200).json(selectedPeople)
             } else {
-                return res.status(204).json({ message: `Person with id not found.` })
+                return res.status(204).json({ message: `People with id not found.` })
             }
        
         } catch (error) {
@@ -25,32 +25,32 @@ class PeopleController {
         }
     }
 
-    static async postPerson(req, res){
-        const newPerson = req.body
+    static async postPeople(req, res){
+        const newPeople = req.body
         try {
-            const newPersonObj = await database.Person.create(newPerson)
-            return res.status(200).json(newPersonObj)
+            const newPeopleObj = await database.People.create(newPeople)
+            return res.status(200).json(newPeopleObj)
         } catch (error) {
             return res.status(400).json(error.message)  
         }
     }
 
-    static async updatePerson(req, res){
+    static async updatePeople(req, res){
         const { id } = req.params
-        const updatePerson = req.body
+        const updatePeople = req.body
         try {
-            await database.Person.update(updatePerson, { where: { id: Number(id) }}) // new info, id from person
-            const selectedPerson = await database.Person.findOne({ where: { id: Number(id) }})
-            return res.status(200).json(selectedPerson)
+            await database.People.update(updatePeople, { where: { id: Number(id) }}) // new info, id from person
+            const selectedPeople = await database.People.findOne({ where: { id: Number(id) }})
+            return res.status(200).json(selectedPeople)
         } catch (error) {
             return res.status(400).json(error.message)  
         }
     }
 
-    static async removePerson(req, res){
+    static async removePeople(req, res){
         const { id } = req.params
         try {
-            await database.Person.destroy({ where: { id: Number(id) }})
+            await database.People.destroy({ where: { id: Number(id) }})
             return res.status(200).json({ message: `User ${id} Removed.` })
         } catch (error) {
             return res.status(400).json(error.message)  
