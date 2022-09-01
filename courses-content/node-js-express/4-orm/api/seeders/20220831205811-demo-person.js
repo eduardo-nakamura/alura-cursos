@@ -1,12 +1,13 @@
 'use strict';
 
 module.exports = {
-  async up (queryInterface, Sequelize) {
-      await queryInterface.bulkInsert('people', [{
+	async up(queryInterface, Sequelize) {
+		await queryInterface.bulkInsert('people', [
+			{
 				name: 'Ana Souza',
 				status: true,
 				email: 'ana@ana.com',
-				role: 'student',
+				role: 'estudante',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
@@ -14,7 +15,7 @@ module.exports = {
 				name: 'Marcos Cintra',
 				status: true,
 				email: 'marcos@marcos.com',
-				role: 'student',
+				role: 'estudante',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
@@ -22,7 +23,7 @@ module.exports = {
 				name: 'Felipe Cardoso',
 				status: true,
 				email: 'felipe@felipe.com',
-				role: 'student',
+				role: 'estudante',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
@@ -30,7 +31,7 @@ module.exports = {
 				name: 'Sandra Gomes',
 				status: false,
 				email: 'sandra@sandra.com',
-				role: 'student',
+				role: 'estudante',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
@@ -38,7 +39,7 @@ module.exports = {
 				name: 'Paula Morais',
 				status: true,
 				email: 'paula@paula.com',
-				role: 'teacher',
+				role: 'docente',
 				createdAt: new Date(),
 				updatedAt: new Date()
 			},
@@ -46,15 +47,16 @@ module.exports = {
 				name: 'Sergio Lopes',
 				status: true,
 				email: 'sergio@sergio.com',
-				role: 'teacher',
+				role: 'docente',
 				createdAt: new Date(),
 				updatedAt: new Date()
-			}], {});
-    
-  },
+			}
+		], {});
 
-  async down (queryInterface, Sequelize) {
-   await queryInterface.bulkDelete('people', null, {});
-  
-  }
+	},
+
+	async down(queryInterface, Sequelize) {
+		await queryInterface.bulkDelete('people', null, {});
+
+	}
 };
