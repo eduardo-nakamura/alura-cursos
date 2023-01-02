@@ -98,3 +98,16 @@ for program in weekend_pl:
 print(john_wick in weekend_pl) # True
 print(atlanta in weekend_pl) # False
 
+def search_movies(movie_search):
+    my_movies = weekend_pl
+    for movie in my_movies:
+        if movie_search == movie:
+            return True
+    return False
+
+search_obj = john_wick
+
+if search_movies(search_obj):
+    print(f'{search_obj.name} is Available')
+else:
+    print(f'{search_obj.name} is not Available')
