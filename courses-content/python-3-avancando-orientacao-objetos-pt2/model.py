@@ -1,5 +1,7 @@
-class Program:
+from abc import ABC # Abstract Base Classes
 
+
+class Program:
     # The __init__  function is called every time an object is created from a class. 
     # The __init__ method lets the class initialize the object’s attributes and serves no other purpose.
     def __init__(self, name, year):
@@ -51,12 +53,16 @@ class Playlist:
         self.name = name
         self._programs = programs
 
+    # The method __getitem__(self, key) defines behavior for when an item is accessed, using the notation self[key].
+    # This is also part of both the mutable and immutable container protocols.
+    def __getitem__(self, item):
+        return self._programs[item]
+
     @property
     def listing(self):
         return self._programs
 
-    @property
-    def size(self):
+    def __len__(self):
         return len(self._programs)
 
 avengers = Movie('Avengers - infinity wars', 2018, 160)
@@ -79,11 +85,16 @@ stranger_things.add_likes()
 
 
 # list
-movies_series = [ avengers, tncfu, john_wick, atlanta, berserk, stranger_things ]
+movies_series = [ avengers, tncfu, john_wick, berserk, stranger_things ]
 weekend_pl = Playlist('Weekend', movies_series)
 
-print(f'Playlist size: {len(weekend_pl.listing)}')
+print(f'Playlist size: {len(weekend_pl)}')
 
 # iterate playlist and print
-for program in weekend_pl.listing:
+for program in weekend_pl:
     print(f'{program}')
+
+# Search for variable in list
+print(john_wick in weekend_pl) # True
+print(atlanta in weekend_pl) # False
+
