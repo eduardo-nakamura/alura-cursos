@@ -1,5 +1,17 @@
-url = "http://bytebank.com/cambio?moedaDestino=dolar&quantidade=100&moedaOrigem=real"
-# &quantidade=100
+# url = "http://bytebank.com/cambio?moedaDestino=dolar&quantidade=100&moedaOrigem=real"
+url = " "
+
+# Clean Url
+url = url.strip(" ","")
+print("       Naka  ") # "       Naka  "
+print("       Naka  ".strip()) # "Naka"
+print("       Naka  ".rstrip()) # "       Naka"
+print("       Naka  ".lstrip()) # "Naka  "
+
+
+if url == "":
+    raise ValueError("URL is Empty")
+
 index_question = url.find('?') # get index from ?
 
 base_url = url[0:index_question] # get string text before ?
@@ -14,6 +26,7 @@ if index_at == -1:
     val = url_query[index_value:]
 else:
     val = url_query[index_value:index_at]
+
 print(f'{val}\n')
 
 # https://cursos.alura.com.br/course/string-python-extraindo-informacoes-url/task/91881
