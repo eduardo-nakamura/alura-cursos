@@ -41,3 +41,5 @@ for acc in accounts:
 
 teste = np.array([1, 3.5])
 print(teste)
+
+# https://cursos.alura.com.br/course/python-collections-listas-e-tuplas/task/54531
